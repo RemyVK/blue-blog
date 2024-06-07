@@ -1,16 +1,18 @@
-import React, { createContext, useContext, useEffect, useState } from "react";
+"use client";
+import React, { createContext, useEffect, useState } from "react";
 import axiosInstance from "../lib/axiosConfig";
 
 type PostContextProviderProps = {
   children: React.ReactNode;
 };
 
-interface Blog {
+export interface Blog {
   userId: number;
   id: number;
   title: string;
   body: string;
 }
+
 type PostContextProps = {
   blogs: Blog[];
   loading: boolean;
@@ -22,6 +24,7 @@ const postContextDefaultValues: PostContextProps = {
   loading: false,
   error: null,
 };
+
 export const PostContext = createContext<PostContextProps>(
   postContextDefaultValues,
 );
@@ -47,6 +50,7 @@ export default function PostContextProvider({
     };
     fetchPosts();
   }, []);
+
   return (
     <PostContext.Provider value={{ blogs, loading, error }}>
       {children}
