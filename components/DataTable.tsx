@@ -1,9 +1,16 @@
 "use client";
+
 import { useContext } from "react";
-import { PostContext, Blog } from "../context/PostsContext";
+import { PostContext } from "../context/PostsContext";
+import { useRouter } from "next/navigation";
 
 export default function DataTable() {
+  const router = useRouter();
   const { blogs, loading, error } = useContext(PostContext);
+
+  const handleClick = (id: number) => {
+    router.push(`posts/${id}`);
+  };
 
   if (loading) {
     return <div>Loading...</div>;
@@ -15,8 +22,13 @@ export default function DataTable() {
 
   return (
     <ul className="divide-y divide-gray-200 max-w-xl mx-auto">
-      {blogs.map((blog: Blog) => (
-        <li key={blog.id} className="py-4">
+      {blogs.map((blog) => (
+        <li
+          key={blog.id}
+          className="py-4"
+          onClick={() => handleClick(blog.id)}
+          style={{ cursor: "pointer" }}
+        >
           <div className="flex space-x-4 bg-white p-4 rounded-lg shadow max-w-xl mx-auto">
             <div className="flex-1">
               <p className="text-xl font-semibold text-black">{blog.title}</p>
