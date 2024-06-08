@@ -21,7 +21,7 @@ type PostContextProps = {
 
 const postContextDefaultValues: PostContextProps = {
   blogs: [],
-  loading: false,
+  loading: true,
   error: null,
 };
 
@@ -33,13 +33,12 @@ export default function PostContextProvider({
   children,
 }: PostContextProviderProps) {
   const [blogs, setBlogs] = useState<Blog[]>([]);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [error, setError] = useState<any>(null);
 
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        setLoading(true);
         const response = await axiosInstance.get("/");
         setBlogs(response.data);
       } catch (error) {
