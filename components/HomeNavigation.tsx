@@ -4,13 +4,17 @@ import Image from "next/image";
 export default function HomeNavigation() {
   const router = useRouter();
   const handleClick = () => router.push("/");
+
   return (
-    <Image
-      fill
-      src="/images/HomeIcon.png"
-      sizes="(max-width: 50px) 100vw, (max-width: 1200px) 50vw, 33vw"
-      alt={" Back Home"}
-      onClick={handleClick}
-    />
+    <div className="w-12 h-12">
+      <Image
+        src="/images/HomeIcon.png"
+        width={25}
+        height={30}
+        alt="Back Home"
+        onClick={handleClick}
+        className="cursor-pointer"
+      />
+    </div>
   );
 }
