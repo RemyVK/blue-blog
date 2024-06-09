@@ -1,6 +1,6 @@
 # Blue Blog
 
-Before setting up the project, make sure zou have node18 installed.
+Before setting up the project, make sure you have node18 installed.
 
 ### Local Setup:
 
