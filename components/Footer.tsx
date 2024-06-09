@@ -13,7 +13,7 @@ import {
 
 export default function Footer() {
   return (
-    <div className="flex items-center justify-center">
+    <div className="flex items-center justify-center space-x-4 mt-10 mb-4">
       <FacebookShareButton url={"https://www.facebook.com/"}>
         <FacebookIcon size={32} round />
       </FacebookShareButton>
