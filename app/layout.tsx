@@ -24,9 +24,7 @@ export default function RootLayout({
       >
         <Providers>
           <BlogHeader />
-          <div className="flex-1 flex justify-between flex-col py-4 px-4">
-            {children}
-          </div>
+          <div className="flex justify-between flex-col">{children}</div>
           <Footer />
         </Providers>
       </body>
