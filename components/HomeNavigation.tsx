@@ -6,7 +6,7 @@ export default function HomeNavigation() {
   const handleClick = () => router.push("/");
 
   return (
-    <div className="w-12 h-12">
+    <div className="flex items-center justify-center w-12 h-12 sm:w-auto sm:h-auto">
       <Image
         src="/images/HomeIcon.png"
         width={25}
