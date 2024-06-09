@@ -4,7 +4,7 @@ import ArticleSuggestion from "./ArticleSuggestion";
 export default function PageErrorState() {
   return (
     <>
-      <div className="flex flex-col min-h-screen justify-center items-center text-center">
+      <div className="flex flex-col sm:flex-row min-h-screen justify-center items-center text-center">
         <p>
           We have some issues collecting the blogs. Please make sure that you
           are connected to the Internet. If this issue persists, please click{" "}
