@@ -20,11 +20,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={inter.className + " flex flex-col min-h-screen bg-cyan-300"}
+        className={inter.className + "flex flex-col min-h-screen bg-cyan-300"}
       >
         <Providers>
           <BlogHeader />
-          <div className="felx-1">{children}</div>
+          <div className="flex-1 flex justify-between flex-col py-4 px-4">
+            {children}
+          </div>
           <Footer />
         </Providers>
       </body>
