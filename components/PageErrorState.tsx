@@ -1,4 +1,5 @@
 import Link from "next/link";
+import ArticleSuggestion from "./ArticleSuggestion";
 
 export default function PageErrorState() {
   return (
@@ -11,11 +12,13 @@ export default function PageErrorState() {
             href="https://mail.google.com/"
             target="_blank"
             rel="noopener noreferrer"
+            className="text-blue-600 hover:underline"
           >
             here.
           </Link>
         </p>
       </div>
+      <ArticleSuggestion />
     </>
   );
 }
