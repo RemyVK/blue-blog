@@ -1,5 +1,5 @@
-import BlogPageLayout from "../components/BlogPageLayout";
+import DataTable from "../components/DataTable";
 
 export default function Home() {
-  return <BlogPageLayout />;
+  return <DataTable />;
 }
